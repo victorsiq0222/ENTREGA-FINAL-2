@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+   
+      <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+   <div class="header"> 
+      <div class="header-left">
+          <h1> Gitfluxo <img src="./image 2.png" alt=""></h1>
+      </div>
+      <div class="header-right">
+          <p>Let's build from here</p>
+      </div>
+  </div>
+  
+       <div class="main">
+         <div class="formulario-container">
+            <h2 class="signin-text">SIGN IN TO GIT FLUXO</h2>
+            <form class="formulario">
+
+           <div class="login-container">
+            <form class="formulario">
+               <label for="nome">username:</label>
+               <input type="text" id="nome" placeholder=" username" />
+           
+               <label for="email"> email address:</label>
+               <input type="email" id="email" placeholder=" email">
+           
+               <label for="password">password:</label>
+               <input type="password" id="password" placeholder="password" />
+               <div class="lembrar-button-container"></div>
+               <label for="lembrar-label">remember-me</remember-me></label>
+               <input type="checkbox" id="lembrar" name="remember" value="remember">
+              
+
+
+               <button id="enviar-btn">Sign-in</button>
+
+                   <div id="login-buttons">
+                       
+                       <button id="google-login">Continue with Google<img class="social-icon" src="./image 4.png" alt=""></button>
+                       <button id="facebook-login">Continue with Facebook <img class="social-icon" src="./image 3.png" alt=""></button>
+                       
+            </form>
+
+              
+
+           </div>
+           <p class="forgot-password">forgot-password?</p>
+       </div>
+  
+       <div class="footer">
+          <p>Telefone Fluxo: (21) 96986-5927 / Endereço Sede: Ilha do Governador Fundão</p>
+       </div>
+  </body>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', function () {
+       // Captura o botão Sign In
+       var signInBtn = document.getElementById('enviar-btn');
+
+       
+       signInBtn.addEventListener('click', function () {
+           
+           var emailValue = document.getElementById('email').value;
+           var senhaValue = document.getElementById('password').value;
+           var lembrarValue = document.getElementById('lembrar').checked;
+
+           // Exibe o alerta com os dados
+           alert('Email: ' + emailValue + '\nSenha: ' + senhaValue + '\nLembrar-me: ' + lembrarValue);
+
+           // confirma o envio 
+           var confirmacao = document.createElement('p');
+           confirmacao.innerHTML = 'Os seguintes dados foram enviados:<br>Email: ' + emailValue + '<br>Senha: ' + senhaValue + '<br>Lembrar-me: ' + lembrarValue;
+
+           
+           document.body.appendChild(confirmacao);
+       });
+   });
+</script>
+</body>
+</html>
+</html>
+  
+  
+  
+       
+  
+      
+
+  
